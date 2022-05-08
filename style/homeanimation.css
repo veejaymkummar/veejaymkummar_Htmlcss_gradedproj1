@@ -1,0 +1,83 @@
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+#animationDiv {
+
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 2px solid steelblue;
+    border-radius: 5px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+
+}
+
+img {
+    position: absolute;
+    object-fit: contain;
+    border: 2px solid steelblue;
+    visibility: hidden;
+}
+
+.firstimg {
+    animation: animate 10s infinite;
+}
+
+.secondimg {
+    animation: animate 10s infinite;
+    animation-delay: 2s;
+}
+
+.thirdimg {
+    animation: animate 10s infinite;
+    animation-delay: 4s;
+}
+
+.forthimg {
+    animation: animate 10s infinite;
+    animation-delay: 6s;
+}
+
+.fifthimg {
+
+    animation: animate 10s infinite;
+    animation-delay: 8s;
+}
+
+@keyframes animate {
+    0% {
+        z-index: 0;
+        visibility: hidden;
+    }
+
+    20% {
+        z-index: 1;
+        visibility: hidden;
+    }
+
+    40% {
+        z-index: 2;
+        visibility: hidden;
+    }
+
+    60% {
+        z-index: 3;
+        visibility: hidden;
+    }
+
+    80% {
+        z-index: 4;
+        visibility: hidden;
+    }
+
+    100% {
+        z-index: 5;
+        visibility: visible;
+    }
+}

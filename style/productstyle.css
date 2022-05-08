@@ -1,0 +1,75 @@
+#covid #diabetes {
+    margin: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.products {
+    position: relative;
+    margin: 5px;
+    margin-left: 5px;
+    display: inline-block;
+    width: 320px;
+    height: 320px;
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+
+.product-header {
+    position: absolute;
+    top: 5px;
+    font-size: large;
+    text-align: center;
+    width: 100%;
+}
+
+.product-mrp {
+    position: absolute;
+    top: 235px;
+    font-size: large;
+    text-align: left;
+    width: 100%;
+    left: 10px;
+}
+
+.product-offer {
+    position: absolute;
+    top: 255px;
+    font-size: large;
+    text-align: left;
+    width: 100%;
+    left: 10px;
+}
+
+.product-button {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 300px;
+    height: 30px;
+    left: 10px;
+    background-color: lavender;
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+.products img {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    border: 2px solid steelblue;
+}
+button:active
+{
+    background-color: rgb(250, 234,230);
+    border-color: rgb(0, 255, 76);
+}
+.products img:hover
+{
+    width: 305px;
+    height: 205px;
+}

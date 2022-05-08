@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/mystyle.css">
+    <link rel="stylesheet" href="style/labtest.css">
+    <title>Register for a Lab Test</title>
+</head>
+
+<body>
+    <div class="topsticky">
+        <header>
+            <h1>Pharmacy</h1>
+        </header>
+        <nav class="menu">
+            <ul class="menu-group">
+                <li><a href="index.html">Home</a></li>
+                <li class="submenu-container">
+                    <a href="#">Our Medicines</a>
+                    <ul class="submenu-group">
+                        <li><a href="#">Fever</a></li>
+                        <li><a href="#">Muscle Pains</a></li>
+                        <li><a href="#">(Cold & Cough)</a></li>
+                    </ul>
+                </li>
+                <li class="submenu-container">
+                    <a href="#">Health Care</a>
+                    <ul class="submenu-group">
+                        <li><a href="#">Baby Care</a></li>
+                        <li><a href="#">Skin Care</a></li>
+                        <li><a href="#">Home Care</a></li>
+                        <li><a href="Products.html">Personal Care</a></li>
+                        <li><a href="#">Pet Care</a></li>
+                    </ul>
+                </li>
+                <li><a href="labtest.html">Lab Test</a></li>
+            </ul>
+        </nav>
+        <br>
+        <br>
+        <div class="buttons-Contianer">
+            <button class="btn-style">Reset</button>
+            <button class="btn-style" onclick="validate()">Submit</button>
+        </div>
+    </div>
+    <form>
+        <main>
+            <div class="mainform">
+                <img src="Images/Lab-Test/lab-test.jpg" class="mainformimage">
+                <div class="mainformfields">
+                    <p>
+                    <h2>1. Your Contact Details</h2>
+                    </p>
+                    <br>
+                    <input type="text" placeholder="Full Name">
+                    <input type="text" placeholder="Patient id if exists">
+                    <br>
+                    <br><br>
+                    <input type="text" placeholder="Contact Number">
+                    <input type="text" placeholder="Email Id">
+                    <br>
+                    <br>
+                    <p>
+                    <h2>2. Address</h2>
+                    </p>
+                    <br>
+                    <input type="text" placeholder="House Number">
+                    <input type="text" placeholder="Street">
+                    <br>
+                    <br><br>
+                    <input type="text" placeholder="Area">
+                    <br><br>
+                    <h3>District</h3><br>
+                    <select name="district">
+                        <option value="" disabled selected hidden>Choose...</option>
+                        <option value="Bengaluru">Bengaluru</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Kolkatta">Kolkatta</option>
+                    </select>
+                    <br><br>
+                    <p>
+                    <h2>3. Choose the Test Type. </h2>
+                    </p>
+                    <div class="Option-container">
+                        <input type="checkbox" id="Test1" name="tests" value="CBC">
+                        <label for="Test1">CBC</label><br>
+                        <input type="checkbox" id="Test2" name="tests" value="Complete Urine">
+                        <label for="Test2">Complete Urine</label><br>
+                        <input type="checkbox" id="Test3" name="tests" value="Lipid Profile">
+                        <label for="Test3">Lipid Profile</label><br>
+                        <input type="checkbox" id="Test4" name="tests" value="Thyroid Stimulating Hormone(TSH)">
+                        <label for="Test4">Thyroid Stimulating Hormone(TSH)</label><br>
+                        <input type="checkbox" id="Test5" name="tests" value="Glucose Test">
+                        <label for="Test5">Glucose Test</label><br>
+                    </div>
+                    <br><br>
+                    <p>
+                    <h2>4. Do you want a hard copy of the report also?</h2>
+                    </p>
+                    <br>
+                    <div class="Option-container">
+                        <select name="HardCopy_Y_N">
+                            <option value="" disabled selected hidden>Choose...</option>
+                            <option value="Y">Yes</option>
+                            <option value="N">No</option>
+                        </select>
+                    </div>
+                    <br><br>
+                    <p>
+                    <h2>5. Select your comfortable Data and Time</h2>
+                    </p>
+                    <br>
+                    <input type="date" placeholder="Select Date">
+                    <input type="time" placeholder="Select Time">
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </main>
+        <script>
+            function validate() {
+                var atleasetoneChecked = false;
+                var a = document.getElementById("Test1").checked;
+                var b = document.getElementById("Test2").checked;
+                var c = document.getElementById("Test3").checked;
+                var d = document.getElementById("Test4").checked;
+                var e = document.getElementById("Test5").checked;
+                if (a === true || b === true || c === true || d === true || e === true) {
+                    atleasetoneChecked = true;
+                }
+                if (atleasetoneChecked == false) {
+                    alert("Atleast One Test to be checked");
+                }
+            }
+        </script>
+    </form>
+    <footer>@copyright. Only for demonstration purposes</footer>
+</body>
+
+</html>
